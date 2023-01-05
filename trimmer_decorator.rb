@@ -2,6 +2,6 @@ require './decorator'
 
 class TrimmerDecorator < Decorator
   def correct_name
-    @nameable.correct_name.delete(' ')
+    @nameable.correct_name.slice(1, 10)
   end
 end
