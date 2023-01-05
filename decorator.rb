@@ -2,7 +2,8 @@ require './nameable.rb'
 
 class Decorator < Nameable
   def initialize(nameable)
-    @component = nameable
+    super()
+    @nameable = nameable
   end
 
   def correct_name
