@@ -1,6 +1,7 @@
 require "./teacher.rb"
 require "./student.rb"
 require "./classroom.rb"
+require "./book.rb"
 
 class App
   attr_reader :books, :people
@@ -11,8 +12,8 @@ class App
   end
 
   def list_all_books
-    books.each do |book|
-      puts("Title: #{book.title}, Author: #{book.author}")
+    books.each_with_index do |book, index|
+      puts("[#{index}] Title: #{book.title}, Author: #{book.author}")
     end
   end
 
@@ -53,6 +54,18 @@ class App
       puts("The number #{number} isn't a valid choice, please select number (1) to create a student or (2) to create
       a teacher")
     end
+  end
+
+  def create_a_book
+    print("Title: ")
+    title = gets.chomp
+
+    print("Author: ")
+    author = gets.chomp
+
+    book = Book.new(title, author)
+    books.push(book)
+    puts("The book has been created successfully")
   end
 
   private
