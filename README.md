@@ -67,8 +67,6 @@ School Library is a project made to practice OOP on making applications, making 
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> I made use of Ruby to create this app, and OOP making use of classes
-
 <details>
   <summary>Client</summary>
   <ul>
