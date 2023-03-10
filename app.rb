@@ -16,4 +16,10 @@ class App
     end
   end
 
+  def list_all_people
+    people.each do |person|
+      puts("[#{person.is_a?(Student) ? "Student" : "Teacher"}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}")
+    end
+  end
+
 end
