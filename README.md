@@ -22,14 +22,9 @@ REQUIRED SECTIONS:
 OPTIONAL SECTIONS:
 - FAQ
 
-After you're finished please remove all the comments and instructions!
--->
-
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <br/>
-
-  <h3><b>Microverse README Template</b></h3>
 
 </div>
 
@@ -46,9 +41,6 @@ After you're finished please remove all the comments and instructions!
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -63,11 +55,9 @@ After you're finished please remove all the comments and instructions!
 
 School Library is a project made to practice OOP on making applications, making use of several classes to keep a record of students/teachers that rent a book, making use of classes and methods to achieve so.
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built with <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> I made use of Ruby to create this app, and OOP making use of classes
 
 <details>
   <summary>Client</summary>
@@ -85,6 +75,12 @@ School Library is a project made to practice OOP on making applications, making 
 - Can keep record of student/teachers that rent a book
 - Create a book
 - Create a student/teacher
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+N/A
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,21 +104,20 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
 ```
---->
+  git clone https://github.com/Javivy/school-library.git
+```
+
+```
+  cd school-library
+```
 
 ### Install
 
 Install this project with:
 
 ```sh
-  cd my-project
+  cd school-library
   gem install
 ```
 --->
@@ -132,8 +127,6 @@ Install this project with:
 <!-- AUTHOR -->
 
 ## 👥 Author <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
 
 👤 **Javivy**
 
@@ -166,18 +159,18 @@ Feel free to check the [issues page](https://github.com/Javivy/school-library/is
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project I encourage you to please leave a star, it would mean a lot to me, thanks! 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgements <a name="acknowledgements"></a>
+
+Microverse
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./MIT.md) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
