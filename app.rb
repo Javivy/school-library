@@ -2,6 +2,7 @@ require "./teacher.rb"
 require "./student.rb"
 require "./classroom.rb"
 require "./book.rb"
+require "./rental.rb"
 
 class App
   attr_reader :books, :people
@@ -12,8 +13,8 @@ class App
   end
 
   def list_all_books
-    books.each_with_index do |book, index|
-      puts("[#{index}] Title: #{book.title}, Author: #{book.author}")
+    books.each do |book, index|
+      puts("Title: #{book.title}, Author: #{book.author}")
     end
   end
 
@@ -66,6 +67,27 @@ class App
     book = Book.new(title, author)
     books.push(book)
     puts("The book has been created successfully")
+  end
+
+  def create_a_rental
+    puts("Select a book from the following list by number")
+    books.each_with_index do |book, index|
+      puts("#{index}) Title: #{book.title}, Author: #{book.author}")
+    end
+    book_number = gets.chomp.to_i
+    book_selected = books[book_number]
+
+    puts("Select a person from the following list by number (not ID)")
+    people.each_with_index do |person, index|
+      puts("#{index}) [#{person.is_a?(Student) ? "Student" : "Teacher"}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}")
+    end
+    person_number = gets.chomp.to_i 
+    person_selected = people[person_number]
+
+    print("Date: ")
+    date = gets.chomp
+
+    rental = Rental.new(date, person_selected, book_selected)
   end
 
   private
