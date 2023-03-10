@@ -163,6 +163,10 @@ If you like this project I encourage you to please leave a star, it would mean a
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🙏 Acknowledgements <a name="acknowledgements"></a>
+
+Microverse
+
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
