@@ -22,9 +22,6 @@ REQUIRED SECTIONS:
 OPTIONAL SECTIONS:
 - FAQ
 
-After you're finished please remove all the comments and instructions!
--->
-
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <br/>
@@ -46,9 +43,6 @@ After you're finished please remove all the comments and instructions!
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -63,7 +57,7 @@ After you're finished please remove all the comments and instructions!
 
 School Library is a project made to practice OOP on making applications, making use of several classes to keep a record of students/teachers that rent a book, making use of classes and methods to achieve so.
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built with <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -83,6 +77,12 @@ School Library is a project made to practice OOP on making applications, making 
 - Can keep record of student/teachers that rent a book
 - Create a book
 - Create a student/teacher
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+N/A
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,21 +106,20 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
 ```
---->
+  git clone https://github.com/Javivy/school-library.git
+```
+
+```
+  cd school-library
+```
 
 ### Install
 
 Install this project with:
 
 ```sh
-  cd my-project
+  cd school-library
   gem install
 ```
 --->
