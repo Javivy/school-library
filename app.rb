@@ -1,8 +1,17 @@
 require "./teacher.rb"
 require "./student.rb"
-require "./classroom.rb"
 require "./book.rb"
 require "./rental.rb"
+
+ACTIONS = {
+  1 => :list_all_books,
+  2 => :list_all_people,
+  3 => :create_person,
+  4 => :create_book,
+  5 => :create_rental,
+  6 => :list_rentals_by_person_id,
+  7 => :break
+}.freeze
 
 class App
   attr_reader :books, :people
@@ -11,6 +20,35 @@ class App
     @books = []
     @people = []
     @rentals = []
+  end
+
+  def options
+    puts ''
+    puts 'Please choose an option by enterin a number:'
+    puts '1 - List all books'
+    puts '2 - List all people'
+    puts '3 - Create a person'
+    puts '4 - Create a book'
+    puts '5 - Create a rental'
+    puts '6 - List all rentals for a given person id'
+    puts '7 - Exit'
+  end
+
+  def select
+    loop do
+      options
+      option = gets.chomp.to_i
+      action = ACTIONS[option]
+
+      if action == :break
+        puts 'Thank you for using this app!'
+        break
+      elsif action
+        send(action)
+      else
+        puts 'Error: Invalid number, try again'
+      end
+    end
   end
 
   def list_all_books
@@ -25,12 +63,13 @@ class App
     end
   end
 
-  def create_person(number)
+  def create_person
+    print "Do you want to create a student (1) or a teacher (2)? [Input the number]: "
+    number = gets.chomp.to_i
+
     if number == 1
       print("Age: ")
       age = gets.chomp
-
-      classroom = Classroom.new("Physics")
       
       print("Name: ")
       name = gets.chomp
@@ -38,7 +77,7 @@ class App
       print("Has parent permission? [Y/N]:")
       parent_permission_console = gets.chomp
       
-      create_student(age, classroom, name, parent_permission_console == "Y" ? parent_permission = true : parent_permission = false)
+      @people.push(Student.new(age, name, parent_permission_console == "Y" ? parent_permission = true : parent_permission = false))
       puts("Person created successfully")
     elsif number == 2
       print("Age: ")
@@ -50,7 +89,7 @@ class App
       print("Name: ")
       name = gets.chomp
 
-      create_teacher(age, specialization, name)
+      @people.push(Teacher.new(age, specialization, name))
       puts("Person created successfully")
     else
       puts("The number #{number} isn't a valid choice, please select number (1) to create a student or (2) to create
@@ -58,19 +97,18 @@ class App
     end
   end
 
-  def create_a_book
+  def create_book
     print("Title: ")
     title = gets.chomp
 
     print("Author: ")
     author = gets.chomp
 
-    book = Book.new(title, author)
-    books.push(book)
+    @books.push(Book.new(title, author))
     puts("The book has been created successfully")
   end
 
-  def create_a_rental
+  def create_rental
     puts("Select a book from the following list by number")
     books.each_with_index do |book, index|
       puts("#{index}) Title: #{book.title}, Author: #{book.author}")
@@ -99,17 +137,5 @@ class App
     @rentals.each do |rental|
       puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}" if rental.person.id == id
     end
-  end
-
-  private
-
-  def create_teacher(age, specialization, name)
-    teacher = Teacher.new(age, specialization, name)
-    people.push(teacher)
-  end
-
-  def create_student(age, classroom, name, parent_permission)
-    student = Student.new(age, classroom, name, parent_permission)
-    people.push(student)
   end
 end
