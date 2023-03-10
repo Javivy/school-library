@@ -26,8 +26,6 @@ OPTIONAL SECTIONS:
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <br/>
 
-  <h3><b>Microverse README Template</b></h3>
-
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -161,7 +159,7 @@ Feel free to check the [issues page](https://github.com/Javivy/school-library/is
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project...
+If you like this project I encourage you to please leave a star, it would mean a lot to me, thanks! 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
