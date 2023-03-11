@@ -76,9 +76,15 @@ class App
       age = gets.chomp
       print('Name: ')
       name = gets.chomp
-      print('Has parent permission? [Y/N]:')
-      parent_permission_console = gets.chomp
-      @people.push(Student.new(age, name, parent_permission_console == 'Y'))
+      print('Has parent permission? [Y/N]: ')
+      parent_permission_console = gets.chomp.capitalize
+      if parent_permission_console === 'N'
+        @people.push(Student.new(age, name: name, parent_permission: false))
+      elsif parent_permission_console === 'Y'
+        @people.push(Student.new(age, name: name, parent_permission: true))
+      else
+        puts 'Please select between [Y/N]'
+      end
       puts('Person created successfully')
     when 2
       print('Age: ')
@@ -87,7 +93,7 @@ class App
       specialization = gets.chomp
       print('Name: ')
       name = gets.chomp
-      @people.push(Teacher.new(age, specialization, name))
+      @people.push(Teacher.new(age, specialization, name: name))
       puts('Person created successfully')
     else
       puts("The number #{number} isn't a valid choice, please select number (1) to create a student or (2) to create
