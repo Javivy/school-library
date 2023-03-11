@@ -78,9 +78,9 @@ class App
       name = gets.chomp
       print('Has parent permission? [Y/N]: ')
       parent_permission_console = gets.chomp.capitalize
-      if parent_permission_console === 'N'
+      if parent_permission_console == 'N'
         @people.push(Student.new(age, name: name, parent_permission: false))
-      elsif parent_permission_console === 'Y'
+      elsif parent_permission_console == 'Y'
         @people.push(Student.new(age, name: name, parent_permission: true))
       else
         puts 'Please select between [Y/N]'
